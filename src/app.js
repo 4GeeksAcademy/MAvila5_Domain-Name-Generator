@@ -22,14 +22,16 @@ function possibleCombos(pronoun, adj, noun, ext) {
     for (let j = 0; j < adj.length; j++) {
       for (let k = 0; k < noun.length; k++) {
         for (let l = 0; l < ext.length; l++) {
-          // Console.log the combinations by creating a string concatenation //
-          console.log(pronoun[i] + adj[j] + noun[k] + ext[l]);
+          // Push the combinations by creating a string concatenation //
+          combinations.push(pronoun[i] + adj[j] + noun[k] + ext[l]);
         }
       }
     }
   }
+  // Return the combination array //
+  return combinations;
 }
 
-// Call the function //
-possibleCombos(pronoun, adj, noun, ext);
-console.log("Any string");
+// Console.log/Print the combinations //
+let results = possibleCombos(pronoun, adj, noun, ext);
+console.log(results);
